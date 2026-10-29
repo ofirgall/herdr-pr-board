@@ -1,0 +1,22 @@
+id = "herdr-pr-board"
+name = "PR Board"
+version = "0.1.0"
+min_herdr_version = "0.8.0"
+description = "Open pull requests across the repositories you choose, grouped by repository and colour-coded by state."
+platforms = ["macos", "linux"]
+
+# Commands run directly, not through a shell, so bun is invoked explicitly.
+
+[[panes]]
+id = "board"
+title = "prs"
+placement = "split"
+command = ["bun", "bin/board.ts"]
+description = "Open PRs in the configured repositories"
+
+[[actions]]
+id = "refresh"
+title = "Refresh PR board"
+description = "Fetch the board now instead of waiting for the next poll"
+contexts = ["global"]
+command = ["bun", "bin/refresh.ts"]

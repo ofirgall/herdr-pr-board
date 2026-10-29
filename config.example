@@ -1,0 +1,20 @@
+# herdr-pr-board configuration. Copy to `config` in the plugin's config
+# directory (herdr plugin config-dir herdr-pr-board) or the plugin root.
+
+# Repositories to watch, separated by spaces or commas.
+#   owner/name   one repository, always shown even with nothing open
+#   owner/       every repository under an owner that has open PRs
+REPOS="herdrdev/herdr ofirgall/"
+
+# Seconds between fetches (at least 5).
+#POLL_SECONDS=60
+
+# Most pull requests fetched in one request (at most 100).
+#MAX_PRS=100
+
+# Prefix repository headings with the owner: auto, always or never.
+# auto shows it only when the board spans more than one owner.
+#SHOW_OWNER=auto
+
+# Set to 0 to draw without colour.
+#COLOR=1
